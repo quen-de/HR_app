@@ -59,6 +59,6 @@ if asked_tim:
 
                     result = response.read().decode("utf-8", 'ignore')[2:-2].replace('\\n', '\n')
                 except:
-                    print("Tim's currently out of the office...")
+                    st.write("Oops, Tim's currently out of the office...")
                     result = ''
             st.write(result)
