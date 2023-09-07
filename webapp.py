@@ -6,6 +6,9 @@ import ssl
 import streamlit as st
 
 
+ENDPOINT_KEY = os.environ["ENDPOINT_KEY"]
+
+
 def allowSelfSignedHttps(allowed):
     # bypass the server certificate verification on client side
     if allowed and not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unverified_context', None):
@@ -41,7 +44,7 @@ if asked_tim:
 
                 url = 'https://fletchers-ai-ws-uksouth-xxgmo.uksouth.inference.ml.azure.com/score'
                 # Replace this with the primary/secondary key or AMLToken for the endpoint
-                api_key = '0Vfd6p2pbqmj3C75U8kCs3X0Ve2Yqg8g'
+                api_key = ENDPOINT_KEY
                 if not api_key:
                     raise Exception("A key should be provided to invoke the endpoint")
 
