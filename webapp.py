@@ -59,10 +59,6 @@ if asked_tim:
 
                     result = response.read().decode("utf-8", 'ignore')[2:-2].replace('\\n', '\n')
                 except urllib.error.HTTPError as error:
-                    print("The request failed with status code: " + str(error.code))
-
-                    # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
-                    print(error.info())
-                    print(error.read().decode("utf8", 'ignore'))
+                    print("Tim's currently out of the office...")
                     result = ''
             st.write(result)
