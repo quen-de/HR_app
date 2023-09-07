@@ -58,7 +58,7 @@ if asked_tim:
                     response = urllib.request.urlopen(req)
 
                     result = response.read().decode("utf-8", 'ignore')[2:-2].replace('\\n', '\n')
-                except urllib.error.HTTPError as error:
+                except:
                     print("Tim's currently out of the office...")
                     result = ''
             st.write(result)
