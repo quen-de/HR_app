@@ -69,8 +69,8 @@ if asked_tim:
             st.write(result)
 
 st.title('_Query examples_')
-st.text('How many holiday days can roll over to the next year?')
-st.text('What should I do if a colleague harasses me?')
-st.text('Where can I access my payslips?')
-st.text('Can I cancel a holiday I previously booked?')
-st.text('What is Fletcher\'s stance on diversity?')
+st.text('• How many holiday days can roll over to the next year?')
+st.text('• What should I do if a colleague harasses me?')
+st.text('• Where can I access my payslips?')
+st.text('• Can I cancel a holiday I previously booked?')
+st.text('• What is Fletcher\'s stance on diversity?')
