@@ -54,11 +54,11 @@ if asked_tim:
 
                 req = urllib.request.Request(url, body, headers)
 
-                # try:
-                response = urllib.request.urlopen(req)
+                try:
+                    response = urllib.request.urlopen(req)
 
-                result = response.read().decode("utf-8", 'ignore')[2:-2].replace('\\n', '\n')
-                # except:
-                #     st.write("Oops, Tim's currently out of the office...")
-                #     result = ''
+                    result = response.read().decode("utf-8", 'ignore')[2:-2].replace('\\n', '\n')
+                except:
+                    st.write("Oops, Tim's currently out of the office...")
+                    result = ''
             st.write(result)
