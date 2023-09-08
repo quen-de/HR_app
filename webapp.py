@@ -26,16 +26,8 @@ allowSelfSignedHttps(True) # this line is needed if you use self-signed certific
 st.set_page_config(page_title='Tim Sbott', page_icon="✅", layout="wide")
 
 st.title("Tim Sbott - Your (almost) perfect HR assistant")
-col1, col2 = st.columns(2)
-with col1:
-    st.image('./res/tim_transparent.png')
-with col2:
-    st.title('_Examples_')
-    st.text('How many holiday days can roll over to the next year?')
-    st.text('What should I do if a colleague harasses me?')
-    st.text('Where can I access my payslips?')
-    st.text('Can I cancel a holiday I previously booked?')
-    st.text('What is Fletcher\'s stance on diversity?')
+st.image('./res/tim_transparent.png')
+
 col1, col2 = st.columns(2)
 with col1:
     query = st.text_input('Question:')
@@ -75,3 +67,10 @@ if asked_tim:
                     print(error.read().decode("utf8", 'ignore'))
                     result = ''
             st.write(result)
+
+st.title('_Query examples_')
+st.text('How many holiday days can roll over to the next year?')
+st.text('What should I do if a colleague harasses me?')
+st.text('Where can I access my payslips?')
+st.text('Can I cancel a holiday I previously booked?')
+st.text('What is Fletcher\'s stance on diversity?')
