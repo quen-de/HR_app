@@ -62,7 +62,7 @@ if asked_tim:
 
 st.title('_Query examples_')
 st.text('• How many holiday days can roll over to the next year?')
-st.text('• What should I do if a colleague harasses me?')
+st.text('• How can I contact HR?')
 st.text('• Where can I access my payslips?')
-st.text('• Can I cancel a holiday I previously booked?')
+st.text('• What is medicash?')
 st.text('• What is Fletcher\'s stance on diversity?')
