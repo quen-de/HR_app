@@ -42,7 +42,6 @@ if asked_tim:
                 data = {'text': str(query)}
 
                 body = str.encode(json.dumps(data))
-
                 url = 'https://fletchers-ai-ws-uksouth-xxgmo.uksouth.inference.ml.azure.com/score'
                 # Replace this with the primary/secondary key or AMLToken for the endpoint
                 api_key = ENDPOINT_KEY
@@ -51,7 +50,7 @@ if asked_tim:
 
                 # The azureml-model-deployment header will force the request to go to a specific deployment.
                 # Remove this header to have the request observe the endpoint traffic rules
-                headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key), 'azureml-model-deployment': 'people-faiss-ugly-uploadv4-1' }
+                headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
 
                 req = urllib.request.Request(url, body, headers)
 
